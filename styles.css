@@ -1,22 +1,27 @@
 body {
-  background: black;
   margin: 0;
   padding: 0;
 }
 
 #canvas1 {
   position: absolute;
-  border: 3px solid white;
-  width: 1000px;
-  height: 800px;
+  border: none;
+  width: 100%;
+  height: 100vh;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-}
+  background: rgb(213,147,71);
+  background: linear-gradient(0deg, rgba(213,147,71,1) 0%, rgba(190,209,223,1) 100%);
+}  
 
-@media only screen and (max-width: 600px) {
+/*@media only screen and (max-width: 600px) {
   #canvas1 {
     width: 85%;
     height: 80vh;
   }
+}
+
+canvas {
+  aspect-ratio: auto 1000 / 600;
 }

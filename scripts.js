@@ -14,7 +14,12 @@ const backgroundLayer3 = new Image();
 backgroundLayer3.src = "layer-3.png";
 const backgroundLayer4 = new Image();
 backgroundLayer4.src = "layer-4.png";
-
+const backgroundLayer5 = new Image();
+backgroundLayer5.src = "layer-7.png";
+const backgroundLayer6 = new Image();
+backgroundLayer6.src = "layer-8.png";
+const backgroundLayer7 = new Image();
+backgroundLayer7.src = "layer-5.png";
 // cargamos el monkuro
 
 const monkuro = new Image();
@@ -55,12 +60,15 @@ class Layer {
     ctx.drawImage(this.image, this.x2, this.y, this.width, this.height);
   }
 }
-const layer1 = new Layer(backgroundLayer1, 0.2);
+const layer1 = new Layer(backgroundLayer1, 0.3);
 const layer2 = new Layer(backgroundLayer2, 0.4);
 const layer3 = new Layer(backgroundLayer3, 0.5);
-const layer4 = new Layer(backgroundLayer4, 0.6);
+const layer4 = new Layer(backgroundLayer4, 0.4);
+const layer5 = new Layer(backgroundLayer5, 0.3);
+const layer6 = new Layer(backgroundLayer6, 0.2);
+const layer7 = new Layer(backgroundLayer7, 0.8);
 
-const gameObjects = [layer4, layer1, layer3, layer2]; // ese es el orden en el que quedan bien, corregir nombre de archivos
+const gameObjects = [layer6, layer5, layer4, layer7, layer3, layer2]; // ese es el orden en el que quedan bien, corregir nombre de archivos
 
 function animate() {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -87,6 +95,10 @@ function animate() {
       frameX = 0;
     }
   }
+
+  // este va acá porque tapa al monkuro
+  layer1.update();
+  layer1.draw();
 
   gameFrame++;
 
