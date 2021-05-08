@@ -45,16 +45,14 @@ const layer2 = new Layer(backgroundLayer2, 0.7);
 const layer3 = new Layer(backgroundLayer3, 0.8);
 const layer4 = new Layer(backgroundLayer4, 0.9);
 
+const gameObjects = [layer4, layer1, layer3, layer2]; // ese es el orden en el que quedan bien, corregir nombre de archivos
+
 function animate() {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  layer4.update();
-  layer4.draw();
-  layer1.update();
-  layer1.draw();
-  layer3.update();
-  layer3.draw();
-  layer2.update();
-  layer2.draw();
+  gameObjects.forEach((object) => {
+    object.update();
+    object.draw();
+  });
 
   requestAnimationFrame(animate);
 }
