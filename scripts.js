@@ -2,8 +2,10 @@ const canvas = document.querySelector("#canvas1");
 const ctx = canvas.getContext("2d");
 const CANVAS_WIDTH = (canvas.width = 1000);
 const CANVAS_HEIGHT = (canvas.height = 800);
+
 let gameSpeed = 10;
 
+// cargamos los layers del back
 const backgroundLayer1 = new Image(); // el constructor Image() tiene la misma funcionalidad que escribir document.createElement('img')
 backgroundLayer1.src = "layer-1.png";
 const backgroundLayer2 = new Image();
@@ -12,6 +14,19 @@ const backgroundLayer3 = new Image();
 backgroundLayer3.src = "layer-3.png";
 const backgroundLayer4 = new Image();
 backgroundLayer4.src = "layer-4.png";
+
+// cargamos el monkuro
+
+const monkuro = new Image();
+monkuro.src = "monk.png";
+
+const monkuroWidth = 104;
+const monkuroHeight = 135;
+
+let frameX = 0;
+let frameY = 1;
+let gameFrame = 0;
+const staggerFrames = 18;
 
 class Layer {
   constructor(image, speedModifier) {
@@ -53,6 +68,27 @@ function animate() {
     object.update();
     object.draw();
   });
+  //ctx.drawImage(image, sx, sy, sw, sh, dx, dy, dw, dh);
+  ctx.drawImage(
+    monkuro,
+    frameX * monkuroWidth,
+    frameY * monkuroHeight,
+    monkuroWidth,
+    monkuroHeight,
+    50,
+    670,
+    monkuroWidth,
+    monkuroHeight
+  );
+  if (gameFrame % staggerFrames == 0) {
+    if (frameX < 3) {
+      frameX++;
+    } else {
+      frameX = 0;
+    }
+  }
+
+  gameFrame++;
 
   requestAnimationFrame(animate);
 }
