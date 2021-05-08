@@ -40,10 +40,10 @@ class Layer {
     ctx.drawImage(this.image, this.x2, this.y, this.width, this.height);
   }
 }
-const layer1 = new Layer(backgroundLayer1, 0.5);
-const layer2 = new Layer(backgroundLayer2, 0.7);
-const layer3 = new Layer(backgroundLayer3, 0.8);
-const layer4 = new Layer(backgroundLayer4, 0.9);
+const layer1 = new Layer(backgroundLayer1, 0.2);
+const layer2 = new Layer(backgroundLayer2, 0.4);
+const layer3 = new Layer(backgroundLayer3, 0.5);
+const layer4 = new Layer(backgroundLayer4, 0.6);
 
 const gameObjects = [layer4, layer1, layer3, layer2]; // ese es el orden en el que quedan bien, corregir nombre de archivos
 
