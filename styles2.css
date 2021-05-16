@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #canvas1 {
+    position: absolute;
+    border: none;
+    width: 90%;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color:rgb(255, 255, 255);
+  }  
+  
+  /*@media only screen and (max-width: 600px) {
+    #canvas1 {
+      width: 85%;
+      height: 80vh;
+    }
+  }
+  
+  canvas {
+    aspect-ratio: auto 1000 / 600;
+  }
+  

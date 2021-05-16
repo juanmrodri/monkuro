@@ -20,13 +20,6 @@ const backgroundLayer6 = new Image();
 backgroundLayer6.src = "layer-8.png";
 const backgroundLayer7 = new Image();
 backgroundLayer7.src = "layer-5.png";
-// cargamos el monkuro
-
-const monkuro = new Image();
-monkuro.src = "monk.png";
-
-const monkuroWidth = 104;
-const monkuroHeight = 135;
 
 let frameX = 0;
 let frameY = 1;
@@ -76,25 +69,6 @@ function animate() {
     object.update();
     object.draw();
   });
-  //ctx.drawImage(image, sx, sy, sw, sh, dx, dy, dw, dh);
-  ctx.drawImage(
-    monkuro,
-    frameX * monkuroWidth,
-    frameY * monkuroHeight,
-    monkuroWidth,
-    monkuroHeight,
-    50,
-    670,
-    monkuroWidth,
-    monkuroHeight
-  );
-  if (gameFrame % staggerFrames == 0) {
-    if (frameX < 3) {
-      frameX++;
-    } else {
-      frameX = 0;
-    }
-  }
 
   // este va acá porque tapa al monkuro
   layer1.update();
