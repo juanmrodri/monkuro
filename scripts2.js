@@ -25,8 +25,6 @@ let frameY = 1;
 let gameFrame = 0;
 const staggerFrames = 18;
 
-
-
 function animate() {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
