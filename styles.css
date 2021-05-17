@@ -31,6 +31,12 @@ img {
   align-items: center;
 }
 
+@media only screen and (max-width: 600px) {
+  .container {
+    height: 50vh;
+  }
+}
+
 .links {
   display: flex;
   flex-direction: column;

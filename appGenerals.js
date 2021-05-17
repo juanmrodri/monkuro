@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const fechita = hoy.getFullYear();
     const textArea = document.querySelector("#date");
     textArea.textContent = fechita;
-    console.log(hoy);
   }
   fecha();
 });
