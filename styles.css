@@ -22,6 +22,11 @@ img {
   width: 100%;
 }
 
+svg {
+  width: 20px;
+  color: #5c5c5c;
+}
+
 .container {
   margin: 0 auto;
   height: 100vh;
@@ -43,6 +48,7 @@ img {
 }
 
 .linkeros a {
+  
   margin-right: 25px;
 }
 
@@ -58,14 +64,16 @@ section {
 }
 
 .text {
+  color: #5c5c5c;
   font-size: 12px;
+  font-weight: 700;
   padding: 10px 10px;
 }
 
 .dater {
   background-color: #c6c6c6;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 }
 
