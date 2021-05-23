@@ -2,7 +2,6 @@
 
 const canvas = document.querySelector("#canvas1");
 const ctx = canvas.getContext("2d");
-
 const CANVAS_WIDTH = (canvas.width = 1000);
 const CANVAS_HEIGHT = (canvas.height = 800);
 
@@ -11,18 +10,18 @@ let gameSpeed = 15;
 // cargamos el monkuro
 
 const monkuro = new Image();
-monkuro.src = "raiden.png";
+monkuro.src = "raiden2.png";
 
 // para sprite monk
 //const monkuroWidth = 104;
 //const monkuroHeight = 135;
 
 // para sprite raiden
-const monkuroWidth = 108;
+const monkuroWidth = 108.5;
 const monkuroHeight = 125;
 
 let frameX = 0;
-let frameY = 1;
+let frameY = 0;
 let gameFrame = 0;
 const staggerFrames = 18;
 
